@@ -1,0 +1,19 @@
+
+DB_DSN: mysql:host=localhost;dbname=db_ges_dette
+DB_USER: root
+DB_PASS: Cybershvdow10@
+APP_ENV: devellopement
+APP_DEBUG: true
+ROOT: /var/www/gestion_dette/
+WEBROOT: idrissawade.com:8080
+Model : Src\Core\Model\Model
+MysqlDatabase: Src\Core\Database\MysqlDatabase
+Validaror: Src\Core\Validators\Validator
+Session: Src\Core\Sessions\Session
+Controller: Src\Core\Controllers\Controller
+Entity: Src\Core\Entity\Entity
+Errors: Src\Core\Errors\ErrorControlle
+Auth: Src\Core\Auth\Authorize
+Files: Src\Core\Files\Files
+Routes: Src\Core\Routes\Route
+Security: Src\Core\Security\SecurityDB

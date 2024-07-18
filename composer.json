@@ -1,0 +1,20 @@
+{
+    "name": "ousseynou_diedhiou/boutiquier_projet",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ousseynou diedhiou",
+            "email": "diedhiouousseynou53@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "symfony/yaml": "^6.4",
+        "symfony/dotenv": "^6.4"
+    }
+}
