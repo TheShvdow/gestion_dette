@@ -4,14 +4,20 @@
 namespace Src\Core\Database;
 
 use PDO;
+use Symfony\Component\Yaml\Yaml;
+
+
 
 final class MysqlDatabase
 {
     private $pdo;
-
-    public function __construct($connection, $host,$port,$database, $username, $password)
+    //$connection, $host,$port,$database, $username, $password
+    public function __construct( )
     {
-        $dsn = "{$connection}:host={$host};port={$port};dbname={$database};";
+        $yaml = Yaml::parseFile('/var/www/gestion_dette/config.yaml');
+        $dsn =  $yaml['DB_DSN'];
+        $username = $yaml['DB_USER'];
+        $password = $yaml['DB_PASS'];
         $options = [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_EMULATE_PREPARES => false,
@@ -22,6 +28,7 @@ final class MysqlDatabase
         } catch (\PDOException $e) {
             die('Database connection failed: ' . $e->getMessage());
         }
+       
     }
 
     public function getPdo()

@@ -36,9 +36,6 @@ require_once ROOT .'Views/main/footer.html.php';
 
 // Dispatcher la requête
 Route::routePage($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);
-// use Symfony\Component\Yaml\Yaml;
-// $yaml = Yaml::parseFile('/var/www/gestion_dette/config.yaml');
 
-// var_dump(new $yaml['MysqlDatabase']);
-// die();
+
 
